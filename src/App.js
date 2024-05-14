@@ -45,7 +45,6 @@ import Task11 from "./Tasks/Task11";
 
 function App() {
   return (
-    
       <div className="App">
         <div>
           <BrowserRouter>
@@ -95,7 +94,6 @@ function App() {
           </BrowserRouter>
         </div>
       </div>
-    
   );
 }
 
