@@ -1,0 +1,45 @@
+.accordion {
+  background-color: #eee;
+  color: green;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size:20px;
+  transition: 0.4s;
+  font-family:sans-serif;
+}
+
+.active,
+.accordion:hover {
+  background-color: #eee;
+}
+
+
+details {
+  background-color: #eee;
+  margin-bottom: 10px;
+
+}
+
+details:hover {
+  background-color: #eee;
+
+}
+
+details>summary {
+  color: green;
+  padding: 5px 10px;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+details>p {
+  padding: 5px 10px 10px 20px;
+  background-color: antiquewhite;
+  color: black;
+  font-size: 1.1em;
+  overflow: hidden;
+}

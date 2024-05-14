@@ -1,0 +1,37 @@
+.container {
+    position: relative;
+}
+
+.box {
+    position: absolute;
+    cursor: pointer;
+    transition: z-index 0.3s ease; /* Smooth transition for z-index */
+}
+
+.box1 {
+    width: 200px;
+    height: 200px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    top: 20px;
+    left: 20px;
+    z-index: 2; /* Higher z-index */
+}
+
+.box2 {
+    width: 120px;
+    height: 120px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    position: absolute;
+    top:60px;
+    display: none; /* Initially hidden */
+    z-index: 3; /* Higher z-index when displayed */
+}
+
+.button {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    right:5px;
+}
