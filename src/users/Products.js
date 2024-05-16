@@ -26,7 +26,7 @@ export default function Products() {
   }, []);
 
   const loadUsers = async () => {
-    const result = await axios.get("http://localhost:8080/api/n1/products");
+    const result = await axios.get("http://3.109.184.234:8080/api/n1/products");
     setUsers(result.data);
   };
 
