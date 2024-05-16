@@ -39,7 +39,7 @@ export default function Products() {
   const [selectedState, setselectedState] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/n1/products")
+    fetch("http://3.109.184.234:8080/api/n1/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
