@@ -26,7 +26,7 @@ export default function Products() {
   }, []);
 
   const loadUsers = async () => {
-    const result = await axios.get("http://3.109.184.234:8080/api/n1/products");
+    const result = await axios.get("http://15.206.127.73:8080/api/n1/products");
     setUsers(result.data);
   };
 
@@ -39,7 +39,7 @@ export default function Products() {
   const [selectedState, setselectedState] = useState(null);
 
   useEffect(() => {
-    fetch("http://3.109.184.234:8080/api/n1/products")
+    fetch("http://15.206.127.73:8080/api/n1/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);
