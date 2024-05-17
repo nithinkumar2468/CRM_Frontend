@@ -55,7 +55,6 @@ export default function Products() {
     : product;
   console.log(filterStates);
   ////////////////////////////////////////////////////////////////
-
   return (
     <section class="py-20">
       <div>
