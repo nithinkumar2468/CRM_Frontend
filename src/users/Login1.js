@@ -21,7 +21,7 @@ const Login1 = () => {
 
     try {
       await axios
-        .post("https://13.126.103.91:8080/api/n1/users/login", {
+        .post("http://13.126.103.91:8080/api/n1/users/login", {
           email: email,
           password: password,
         })

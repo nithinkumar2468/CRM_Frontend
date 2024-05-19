@@ -37,7 +37,7 @@ export default function ViewProducts() {
   ])
 
   useEffect(()=>{
-    fetch("https://13.126.103.91:8080/api/n1/products")
+    fetch("http://13.126.103.91:8080/api/n1/products")
     .then(res=>res.json())
     .then(data=>setRowData(data));
   },[]);
