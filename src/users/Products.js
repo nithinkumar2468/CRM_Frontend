@@ -26,7 +26,7 @@ export default function Products() {
   }, []);
 
   const loadUsers = async () => {
-    const result = await axios.get("http://localhost:8080/api/n1/products");
+    const result = await axios.get("https://stscrmbackend-production.up.railway.app/api/n1/products");
     setUsers(result.data);
   };
 
@@ -39,7 +39,7 @@ export default function Products() {
   const [selectedState, setselectedState] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/n1/products")
+    fetch("https://stscrmbackend-production.up.railway.app/api/n1/products")
       .then((res) => res.json())
       .then((data) => setProducts(data));
   }, []);

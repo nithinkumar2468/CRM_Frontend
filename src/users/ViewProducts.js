@@ -13,7 +13,7 @@ export default function ViewProducts() {
   }, []);
 
   const loadUsers = async () => {
-    const result = fetch("http://localhost:8080/api/n1/products")
+    const result = fetch("https://stscrmbackend-production.up.railway.app/api/n1/products")
     .then(res=>res.json())
     .then(data=>
     setUsers(result.data));
@@ -37,7 +37,7 @@ export default function ViewProducts() {
   ])
 
   useEffect(()=>{
-    fetch("http://localhost:8080/api/n1/products")
+    fetch("https://stscrmbackend-production.up.railway.app/api/n1/products")
     .then(res=>res.json())
     .then(data=>setRowData(data));
   },[]);
