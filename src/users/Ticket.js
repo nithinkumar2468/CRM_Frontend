@@ -21,7 +21,7 @@ export default function Ticket() {
 
   const loadUsers = async () => {
     const result = await axios.get(
-      `http://localhost:8080/api/n1/tickets`);
+      `https://stscrmbackend-production.up.railway.app/api/n1/tickets`);
     console.log(token);
     result.data.sort((a, b) => {
       const dateA = new Date(

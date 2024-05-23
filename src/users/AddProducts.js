@@ -21,7 +21,7 @@ function AddProducts() {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:8080/api/n1/product", user);
+    await axios.post("https://stscrmbackend-production.up.railway.app/api/n1/product", user);
     navigate("/viewproducts");
   };
 

@@ -32,9 +32,6 @@ export default function BuynowProduct() {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    {
-      /*await axios.put(`http://localhost:8080/product/${id}`, user);*/
-    }
     navigate("/payments", {
       state: { pname: pname, price: price },
     });
@@ -98,7 +95,7 @@ export default function BuynowProduct() {
                   className="form-control"
                   placeholder="Enter price"
                   name="price"
-                  value={price}
+                  value={location.state.price}
                   onChange={(e) => onInputChange(e)}
                 />
               </div>
