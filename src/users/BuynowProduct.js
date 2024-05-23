@@ -95,7 +95,7 @@ export default function BuynowProduct() {
                   className="form-control"
                   placeholder="Enter price"
                   name="price"
-                  value={location.state.price}
+                  value={price}
                   onChange={(e) => onInputChange(e)}
                 />
               </div>
