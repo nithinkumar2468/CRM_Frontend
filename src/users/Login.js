@@ -76,7 +76,7 @@ function Login() {
 
         if (isValid) {
             try {
-               const response = await axios.post("http://localhost:8080/api/n1/user", user);
+               const response = await axios.post("https://stscrmbackend-production.up.railway.app/api/n1/user", user);
 
                 const responseData = response && response.data;
 
