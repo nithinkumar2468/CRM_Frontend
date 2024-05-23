@@ -21,7 +21,7 @@ const Login1 = () => {
 
     try {
       await axios
-        .post("http://localhost:8080/api/n1/users/login", {
+        .post("https://stscrmbackend-production.up.railway.app/api/n1/users/login", {
           email: email,
           password: password,
         })

@@ -48,7 +48,7 @@ name=cart.map((item)=>item.pname);
 
   const onSubmit = async (e) => {
     e.preventDefault();
-     await axios.post(`http://localhost:8080/api/n1/${useremail}/order`,order);
+     await axios.post(`https://stscrmbackend-production.up.railway.app/api/n1/${useremail}/order`,order);
 
     navigate("/paymentdone");
   };

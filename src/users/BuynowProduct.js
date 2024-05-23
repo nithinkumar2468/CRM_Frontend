@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { useCart } from "../context/ContextCart";
 import Navbar1 from "./Navbar1";
-import { toggleButtonClasses } from "@mui/material";
 
 export default function BuynowProduct() {
   const { addToCart, cartItems } = useCart();
@@ -42,7 +41,7 @@ export default function BuynowProduct() {
   };
 
   const loadUser = async () => {
-    const result = await axios.get(`http://localhost:8080/api/n1/product/${id}`);
+    const result = await axios.get(`https://stscrmbackend-production.up.railway.app/api/n1/product/${id}`);
     console.log(user);
     setUser(result.data);
   };
