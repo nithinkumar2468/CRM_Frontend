@@ -11,7 +11,7 @@ export default function MyPurchase() {
   const [orders, setOrders] = useState("");
 
   useEffect(() => {
-    fetch(`http://localhost:8080/api/n1/${useremail}/orders`)
+    fetch(`https://stscrmbackend-production.up.railway.app/api/n1/${useremail}/orders`)
       .then((res) => res.json())
       .then((data) => {
         data.sort((a, b) => {

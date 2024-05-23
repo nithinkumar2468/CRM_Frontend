@@ -11,7 +11,7 @@ export default function MyAddress() {
   const [useraddress, setUserAddress] = useState("");
 
   useEffect(() => {
-    fetch(`http://localhost:8080/api/n1/${useremail}/tickets`)
+    fetch(`https://stscrmbackend-production.up.railway.app/api/n1/${useremail}/tickets`)
       .then((res) => res.json())
       .then((data) => {
         data.sort((a, b) => {

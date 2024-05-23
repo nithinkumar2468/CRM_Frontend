@@ -23,7 +23,7 @@ const useremail=window.localStorage.getItem("isLoggedIn");
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    await axios.post(`http://localhost:8080/api/n1/${useremail}/ticket`, ticket);
+    await axios.post(`https://stscrmbackend-production.up.railway.app/api/n1/${useremail}/ticket`, ticket);
     navigate("/issueraised");
   };
 
