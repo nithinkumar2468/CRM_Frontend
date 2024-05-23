@@ -26,12 +26,12 @@ export default function EditTicket() {
 
     const onSubmit = async (e) => {
         e.preventDefault();
-        await axios.put(`http://localhost:8080/api/n1/ticket/${id}`, user);
+        await axios.put(`https://stscrmbackend-production.up.railway.app/api/n1/ticket/${id}`, user);
         navigate("/ticket");
     };
 
     const loadUser = async () => {
-        const result = await axios.get(`http://localhost:8080/api/n1/ticket/${id}`);
+        const result = await axios.get(`https://stscrmbackend-production.up.railway.app/api/n1/ticket/${id}`);
         setUser(result.data);
     };
 
