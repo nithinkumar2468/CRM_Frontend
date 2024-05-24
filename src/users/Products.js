@@ -66,7 +66,7 @@ export default function Products() {
             <table>
               <tbody>
                 <tr>
-                  <td style={{ width: "400px", "padding-right": "300px" }}>
+                  <td style={{ width: "600px", "padding-right": "300px" }}>
                     <div className="" style={{ "border-radius": "400px" }}>
                       <Select
                         options={stateoptions}
@@ -79,8 +79,8 @@ export default function Products() {
                       />
                     </div>
                   </td>
-                  <td style={{ width: "400px",height:"100px", color: "#cc3300" }}>
-                    <h1> Mobiles</h1>
+                  <td style={{ width: "400px", color: "#cc3300" }}>
+                    <h2> Mobiles</h2>
                   </td>
                   <td>
                     <SearchBar setResults={setResults} />
