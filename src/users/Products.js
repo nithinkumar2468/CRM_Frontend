@@ -9,11 +9,10 @@ import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";
 import Chatbot from "./Chatbot";
 import { useDispatch } from "react-redux";
-import { incrementcart ,decrementcart} from "../Redux/Reducer";
+import { incrementcart, decrementcart } from "../Redux/Reducer";
 
 export default function Products() {
-
-  const dispatch=useDispatch();
+  const dispatch = useDispatch();
 
   const [users, setUsers] = useState([]);
 
@@ -26,7 +25,9 @@ export default function Products() {
   }, []);
 
   const loadUsers = async () => {
-    const result = await axios.get("https://stscrmbackend-production.up.railway.app/api/n1/products");
+    const result = await axios.get(
+      "https://stscrmbackend-production.up.railway.app/api/n1/products"
+    );
     setUsers(result.data);
   };
 
@@ -65,7 +66,7 @@ export default function Products() {
             <table>
               <tbody>
                 <tr>
-                  <td style={{ width: "600px", "padding-right": "300px" }}>
+                  <td style={{ width: "400px", "padding-right": "300px" }}>
                     <div className="" style={{ "border-radius": "400px" }}>
                       <Select
                         options={stateoptions}
@@ -78,9 +79,8 @@ export default function Products() {
                       />
                     </div>
                   </td>
-                  <td style={{ width: "400px" }}>
+                  <td style={{ width: "400px", color: "#cc3300" }}>
                     <h2> Mobiles</h2>
-                   
                   </td>
                   <td>
                     <SearchBar setResults={setResults} />
@@ -92,15 +92,18 @@ export default function Products() {
             <SearchResults results={results} />
             <table className="table border shadow table table-hover">
               <tbody border="5px">
-                {filterStates.map((item,index) => (
+                {filterStates.map((item, index) => (
                   <tr>
                     <td>
                       <img
-                        src={`https://crmproduct.s3.ap-south-1.amazonaws.com/${item.pname.toLowerCase().replace(/\s/g,'').slice(0,16)}.webp`}
-                        style={{width:"200px",height:"200px"}}
+                        src={`https://crmproduct.s3.ap-south-1.amazonaws.com/${item.pname
+                          .toLowerCase()
+                          .replace(/\s/g, "")
+                          .slice(0, 16)}.webp`}
+                        style={{ width: "200px", height: "200px" }}
                       />
                     </td>
-                    
+
                     <td>
                       <h5>{item.pname}</h5>
                       <br></br>
@@ -115,14 +118,14 @@ export default function Products() {
                         </h3>
                       </center>
                     </td>
-                     <td>
+                    <td>
                       <br></br>
                       <br></br>
                       <br></br>
                       <br></br>
                       <br></br>
                       <br></br>
-                     {/*  <h5>
+                      {/*  <h5>
                       
                         <button
                         className="btn btn-outline-primary mx-2"
@@ -141,7 +144,7 @@ export default function Products() {
                           Remove From Cart
                         </button>
                       </h5> */}
-                    </td> 
+                    </td>
                     <td>
                       <br></br>
                       <br></br>
@@ -149,7 +152,7 @@ export default function Products() {
                       <br></br>
                       <br></br>
                       <br></br>
-                      
+
                       <h5 width="50px">
                         <Link
                           className="btn btn-outline-primary mx-2"
@@ -168,49 +171,4 @@ export default function Products() {
       </div>
     </section>
   );
-}
-
-{
-  /* 
-
-const columnDefs = [
-    { field: 'pname', filter: true },
-    { field: 'rating' },
-    { field: 'price', filter: true }
-  ];
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    fetch("http://localhost:8080/products")
-      .then(res => res.json())
-      .then(item => setData(item));
-  }, []);
-  <div>
-              <div className="ag-theme-alpine" style={{ width: 800, height: 500, margin: 'auto' }}>
-                <AgGridReact
-                  rowData={data}
-                  columnDefs={columnDefs}
-                />
-              </div>
-              </div> */
-}
-
-{
-  /* <div className="container ">
-            <div className="row">
-              {filterStates.map((item) => (
-                <div className="col-md-3" key={item.id}>
-                  <div className="card p-4 p-4" style={{"height":"600px" ,"padding-bottom":"4px"}}>
-                    <img src="https://capston-crm.s3.ap-south-1.amazonaws.com/mobile2.png" />
-                  
-                  <h5 className="card-title">{item.pname}</h5>
-                  <p><h4 className="card-body">M.R.P: {item.price}/-</h4></p>
-                  <Link
-                    className="btn btn-outline-primary mx-2 card-link "
-                    to={`/buynowproduct/${item.id}`}>
-                    Buy Now
-                  </Link>
-                  </div>
-                </div>
-              ))}
-            </div> */
 }
