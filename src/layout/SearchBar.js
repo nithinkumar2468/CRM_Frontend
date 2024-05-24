@@ -9,7 +9,7 @@ function SearchBar({setResults}) {
         .then((response)=>response.json())
         .then((json)=>{
             const results=json.filter((user)=>{
-                return value && user && user.pname && user.pname.toLowerCase().includes(value.toLowerCase);
+                return value && user && user.pname && user.pname.toLowerCase().includes(value);
             });
             setResults(results);
         });
