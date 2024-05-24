@@ -10,7 +10,7 @@ function Searchlist({ result }) {
     }, []);
 
     const loadUsers = async () => {
-        const results = await axios.get("https://stscrmbackend-production.up.railway.app/products");
+        const results = await axios.get("https://stscrmbackend-production.up.railway.app/api/n1/products");
         setUsers(results.data);
         
     };
