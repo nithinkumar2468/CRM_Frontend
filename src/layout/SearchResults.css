@@ -1,6 +1,7 @@
 .results-body {
     width:260px;
     text-decoration: none;
+    float: right;
 }
 
 .results-list {
