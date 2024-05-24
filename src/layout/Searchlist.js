@@ -19,6 +19,7 @@ function Searchlist({ result }) {
             {users.map((user, index) => (
             <Link to={`/buynowproduct/${result.id}`} style={{"textDecoration":'none'}}>
                 {result.pname.slice(0, 30)}
+                {console.log(result)}
             </Link>
             ))}
         </div>
