@@ -4,7 +4,7 @@
 }
 
 .results-list {
-    width: 100%;
+    width: 60%;
     background-color: aliceblue;
     display: flex;
     flex-direction: column;
