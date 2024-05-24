@@ -79,10 +79,10 @@ export default function Products() {
                       />
                     </div>
                   </td>
-                  <td style={{ width: "500px", color: "#cc3300" }}>
+                  <td style={{ width: "300px", color: "#cc3300" }}>
                     <h2> Mobiles</h2>
                   </td>
-                  <td>
+                  <td style={{width:"200px"}}>
                     <SearchBar setResults={setResults} />
                   </td>
                 </tr>
@@ -113,9 +113,9 @@ export default function Products() {
                       <br></br>
                       <br></br>
                       <center>
-                        <h3 style={{ color: "#cc3300" }}>
+                        <h2 style={{ color: "#cc3300" }}>
                           M.R.P.:&nbsp;₹{item.price}/-
-                        </h3>
+                        </h2>
                       </center>
                     </td>
                     <td>
