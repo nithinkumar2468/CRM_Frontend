@@ -5,7 +5,7 @@ function SearchBar({setResults}) {
     const[input,setInput]=useState("");
 
     const fetchData=(value)=>{
-        fetch("http://localhost:8080/products")
+        fetch("https://stscrmbackend-production.up.railway.app/api/n1/products")
         .then((response)=>response.json())
         .then((json)=>{
             const results=json.filter((user)=>{
@@ -20,7 +20,7 @@ function SearchBar({setResults}) {
     }
     return (
         <div className="input-wrapper">
-            <FaSearch id="search-icon" />
+            <FaSearch id="search-icon" />&nbsp;
             <input placeholder="search" 
             value={input}
             onChange={(e)=>handleChange(e.target.value)}/>
