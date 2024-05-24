@@ -18,7 +18,7 @@ function Searchlist({ result }) {
         <div className="searchlist" >
             {users.map((user, index) => (
             <Link to={`/buynowproduct/${result.id}`} style={{"textDecoration":'none'}}>
-                {user.pname}
+                {result.pname}
             </Link>
             ))}
         </div>
