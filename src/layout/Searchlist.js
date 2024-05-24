@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Searchlist.css";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Searchlist({ result }) {
-    let navigate = useNavigate();
     const [users, setUsers] = useState([]);
     useEffect(() => {
         loadUsers();
     }, []);
 
     const loadUsers = async () => {
-        const results = await axios.get("http://localhost:8080/products");
+        const results = await axios.get("https://stscrmbackend-production.up.railway.app/products");
         setUsers(results.data);
         
     };

@@ -5,7 +5,7 @@ function SearchBar({setResults}) {
     const[input,setInput]=useState("");
 
     const fetchData=(value)=>{
-        fetch("http://localhost:8080/products")
+        fetch("https://stscrmbackend-production.up.railway.app/products")
         .then((response)=>response.json())
         .then((json)=>{
             const results=json.filter((user)=>{
