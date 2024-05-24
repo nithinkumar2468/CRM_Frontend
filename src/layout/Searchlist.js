@@ -18,8 +18,7 @@ function Searchlist({ result }) {
         <div className="searchlist" >
             {users.map((user, index) => (
             <Link to={`/buynowproduct/${result.id}`} style={{"textDecoration":'none'}}>
-                {result.pname.slice(0, 30)}
-                {console.log(result)}
+                {user.pname.slice(0, 30)}
             </Link>
             ))}
         </div>
