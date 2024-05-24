@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./Searchlist.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 function Searchlist({ result }) {
+    let navigate = useNavigate();
     const [users, setUsers] = useState([]);
     useEffect(() => {
         loadUsers();
     }, []);
 
     const loadUsers = async () => {
-        const results = await axios.get("https://stscrmbackend-production.up.railway.app/api/n1/products");
+        const results = await axios.get("http://localhost:8080/products");
         setUsers(results.data);
         
     };
@@ -25,13 +26,3 @@ function Searchlist({ result }) {
     )
 }
 export default Searchlist;
-
-/* import "./Searchlist.css";
-function Searchlist({result}){
-    return(
-        <div className="searchlist" onClick={(e)=>alert(`You Clicked on ${result.p_name}`)}>
-            {result.p_name}
-        </div>
-    )
-}
-export default Searchlist; */
