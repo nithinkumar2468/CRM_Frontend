@@ -80,7 +80,7 @@ export default function Products() {
                     </div>
                   </td>
                   <td style={{ width: "300px", color: "#cc3300" }}>
-                    <h2> Mobiles</h2>
+                    <h1> Mobiles</h1>
                   </td>
                   <td style={{width:"200px"}}>
                     <SearchBar setResults={setResults} />
