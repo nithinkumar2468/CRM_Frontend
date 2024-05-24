@@ -67,7 +67,7 @@ export default function Products() {
               <tbody>
                 <tr>
                   <td style={{ width: "400px", "padding-right": "300px" }}>
-                    <div className="" style={{ "border-radius": "300px" }}>
+                    <div className="" style={{ "border-radius": "400px" }}>
                       <Select
                         options={stateoptions}
                         isClearable
