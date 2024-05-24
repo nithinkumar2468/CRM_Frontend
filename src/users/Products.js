@@ -79,8 +79,8 @@ export default function Products() {
                       />
                     </div>
                   </td>
-                  <td style={{ width: "500px",height:"100px", color: "#cc3300" }}>
-                    <h2> Mobiles</h2>
+                  <td style={{ width: "400px",height:"100px", color: "#cc3300" }}>
+                    <h1> Mobiles</h1>
                   </td>
                   <td>
                     <SearchBar setResults={setResults} />
