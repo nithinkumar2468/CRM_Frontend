@@ -2,10 +2,11 @@
     width:260px;
     text-decoration: none;
     float: right;
+    padding-left: 1000px;
 }
 
 .results-list {
-    width: 60%;
+    width: 100%;
     background-color: aliceblue;
     display: flex;
     flex-direction: column;
