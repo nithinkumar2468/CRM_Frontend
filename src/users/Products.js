@@ -66,7 +66,7 @@ export default function Products() {
             <table>
               <tbody>
                 <tr>
-                  <td style={{ width: "600px", "padding-right": "300px" }}>
+                  <td style={{ width: "500px", "padding-right": "300px" }}>
                     <div className="" style={{ "border-radius": "400px" }}>
                       <Select
                         options={stateoptions}
@@ -79,7 +79,7 @@ export default function Products() {
                       />
                     </div>
                   </td>
-                  <td style={{ width: "400px", color: "#cc3300" }}>
+                  <td style={{ width: "500px", color: "#cc3300" }}>
                     <h2> Mobiles</h2>
                   </td>
                   <td>
