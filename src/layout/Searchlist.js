@@ -25,3 +25,13 @@ function Searchlist({ result }) {
     )
 }
 export default Searchlist;
+
+/* import "./Searchlist.css";
+function Searchlist({result}){
+    return(
+        <div className="searchlist" onClick={(e)=>alert(`You Clicked on ${result.p_name}`)}>
+            {result.p_name}
+        </div>
+    )
+}
+export default Searchlist; */
