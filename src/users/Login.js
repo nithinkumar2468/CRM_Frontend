@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { message } from "antd"
 
 function Login() {
     let navigate = useNavigate();
@@ -19,9 +20,6 @@ function Login() {
         password: "",
         retypepassword: "",
     });
-
-    const [successMessage, setSuccessMessage] = useState("");
-
     const [errorMessage, setErrorMessage] = useState("");
 
     const validateUser = () => {
@@ -79,8 +77,7 @@ function Login() {
                const response = await axios.post("https://stscrmbackend-production.up.railway.app/api/n1/user", user);
 
                 const responseData = response && response.data;
-
-                setSuccessMessage("Registration successful");
+                message.success("Registration successful..!")
 
                 setUser({
                     name: "",
@@ -92,11 +89,10 @@ function Login() {
                 setUserErrors({});
                 setErrorMessage("");
                 const userdata = await axios.get("http://localhost:8080/api/n1/users");
-                console.log(userdata.data.name)
+        
 
             } catch (error) {
                 setErrorMessage("Error during registration. Please try again.");
-                setSuccessMessage("");
             } finally {
                 navigate("/login1");
             }
@@ -192,7 +188,6 @@ function Login() {
                             >
                                 Submit
                             </button>
-                            {successMessage && <p className="text-green-500 mt-4">{successMessage}</p>}
                             {errorMessage && <p className="text-red-500 mt-4">{errorMessage}</p>}
                             <Link className="btn btn-outline-danger mx-2" to="/">
                                 Cancel

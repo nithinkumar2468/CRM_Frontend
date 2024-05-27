@@ -90,7 +90,6 @@ export default function Products() {
             </table>
 
             <SearchResults results={results} />
-            {console.log(results)}
             <table className="table border shadow table table-hover">
               <tbody border="5px">
                 {filterStates.map((item, index) => (
