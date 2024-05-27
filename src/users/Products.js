@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
 import Navbar1 from "./Navbar1";
@@ -8,11 +8,9 @@ import Select from "react-select";
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";
 import Chatbot from "./Chatbot";
-import { useDispatch } from "react-redux";
 import { incrementcart, decrementcart } from "../Redux/Reducer";
 
 export default function Products() {
-  const dispatch = useDispatch();
 
   const [users, setUsers] = useState([]);
 
@@ -31,10 +29,6 @@ export default function Products() {
     setUsers(result.data);
   };
 
-  const deleteUser = async (id) => {
-    await axios.delete(`http://localhost:8080/user/${id}`);
-    loadUsers();
-  };
   //////////////////////////////////////////////////////////////////
   const [product, setProducts] = useState([]);
   const [selectedState, setselectedState] = useState(null);
@@ -100,6 +94,7 @@ export default function Products() {
                           .toLowerCase()
                           .replace(/\s/g, "")
                           .slice(0, 16)}.webp`}
+                          alt="mobile"
                         style={{ width: "200px", height: "200px" }}
                       />
                     </td>
