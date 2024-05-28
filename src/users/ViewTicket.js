@@ -17,7 +17,7 @@ export default function ViewTicket() {
   }, []);
 
   const loadUser = async () => {
-    const result = await axios.get(`http://localhost:8080/ticket/${id}`);
+    const result = await axios.get(`https://stscrmbackend-production.up.railway.app/api/n1/ticket/${id}`);
     setUser(result.data);
   };
 
