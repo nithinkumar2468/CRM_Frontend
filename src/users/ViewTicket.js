@@ -15,7 +15,6 @@ export default function ViewTicket() {
   useEffect(() => {
     loadUser();
   }, []);
-
   const loadUser = async () => {
     const result = await axios.get(`https://stscrmbackend-production.up.railway.app/api/n1/ticket/${id}`);
     setUser(result.data);
